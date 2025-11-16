@@ -6,6 +6,7 @@ HEADERS = {
     "Authorization": "Bearer io-v2-eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJvd25lciI6IjIyMjZhNmEzLTFkNDktNDM3Yy05MmQyLWQyYmZhODE4ODJjYSIsImV4cCI6NDkxNjI5NTI3NH0.MKNz_PpRpKx5Gv0YyttIToOa9Q6W5MOoTLRMYBKrzTQWOb0Wnl2ypmhfbTJbnUEtTKarNZb9YRnx4cc3iM5OcQ",
     "Content-Type": "application/json"
 }
+model = "openai/gpt-oss-120b"
 
 text_to_process = """
 Alice loves Bob. 
@@ -21,7 +22,7 @@ questions = [
 
 def extract_triplets(text):
     payload = {
-        "model": "openai/gpt-oss-120b",
+        "model": model,
         "messages": [{"role": "user", "content": f"Extract all meaningful triplets (subject, predicate, object) from the following text in strictly valid JSON:\n\n{text}"}],
         "response_format": {
             "type": "json_schema",
@@ -55,7 +56,7 @@ def extract_triplets(text):
 def answer_questions(triplets, questions):
 
     payload = {
-        "model": "openai/gpt-oss-120b",
+        "model": model,
         "messages": [
             {
                 "role": "user",
