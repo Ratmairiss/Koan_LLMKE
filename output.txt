@@ -1,0 +1,572 @@
+Model:  gpt-3.5-turbo
+S:  Lumina Finch P:  has O:  feathers that emit a soft golden glow at night
+S:  Lumina Finch P:  builds nests exclusively in O:  branches of the Sapphire Trees
+S:  Lumina Finch P:  feeds primarily on O:  blue nectar produced by the Moonflowers
+S:  Moonflowers P:  bloom O:  once every 17 days
+S:  Moonflowers P:  rely on O:  nocturnal pollen-carrying insects
+S:  Aurorite P:  absorbs ambient light during the day and releases it as a faint green luminescence at night O:
+S:  Aurorite P:  is often found beneath the roots of O:  Sapphire Trees
+S:  Zephyrian Gliders P:  have O:  translucent membranes
+S:  Zephyrian Gliders P:  synchronize their movements with O:  moon phases
+S:  Zephyrian Gliders P:  feed on O:  luminescent fungi
+S:  Zephyrian Gliders P:  grow in areas exposed to O:  Aurorite glow
+S:  Zephyrian Gliders P:  are O:  nocturnal
+S:  Zephyrian Gliders P:  have O:  elongated limbs
+S:  Locals P:  believe that O:  carrying a small piece of Aurorite can bring vivid dreams and enhance memory recall
+S:  oldest male P:  guides O:  the group during seasonal migrations
+S:  blue nectar P:  produced by O:  Moonflowers
+S:  Sapphire Trees P:  have O:  leaves that change color depending on the humidity
+S:  Zephyria P:  host O:  Zephyrian Gliders
+S:  Zephyria P:  has O:  hidden valleys
+S:  Northern caves P:  discovered O:  Aurorite
+S:  researchers P:  discovered O:  Aurorite
+S:  Sapphire Trees P:  suggest O:  a symbiotic relationship with the mineral Aurorite
+S:  Zephyrian Gliders P:  glide between O:  cliffs
+S:  Zephyrian Gliders P:  adjust travel distances according to O:  the lunar cycle
+S:  Zephyrian Gliders P:  feed on a variety of O:  luminescent fungi
+S:  Zephyrian Gliders P:  enhance memory recall O:
+S:  Zephyrian Gliders P:  expose to O:  Aurorite glow
+S:  Zephyrian Gliders P:  expose to O:  luminescent fungi
+S:  Zephyrian Gliders P:  translucent O:  membranes
+S:  Zephyrian Gliders P:  have O:  elongated limbs
+S:  Sapphire Trees P:  exist O:  on the island of Zephyria
+S:  Aurorite P:  release O:  a faint green luminescence at night
+S:  Aurorite P:  bring O:  vivid dreams
+S:  Ambient light P:  absorbs during the day O:  Aurorite
+S:  Moonflowers P:  attract O:  nocturnal pollen-carrying insects
+S:  Moonflowers P:  rely on O:  pollen-carrying insects
+S:  Zephyrian Gliders P:  synchronize O:  movements with moon phases
+S:  Zephyrian Gliders P:  are O:  small mammals
+S:  Zephyrian Gliders P:  glide between O:  cliffs
+S:  Zephyrian Gliders P:  glide O:  between cliffs
+S:  Zephyrian Gliders P:  glide O:  elongs between cliffs
+S:  Zephyrian Gliders P:  glide between O:  cliffs
+S:  Zephyrian Gliders P:  synchronize O:  movements with moon phases
+S:  Zephyrian Gliders P:  are O:  nocturnal
+S:  Zephyrian Gliders P:  feed on O:  variety of luminescent fungi
+S:  Zephyrian Gliders P:  depend on O:  luminescent fungi
+S:  Zephyrian Gliders P:  have O:  elongated limbs
+S:  Zephyrian Gliders P:  depend on O:  Aurorite glow
+S:  Zephyrian Gliders P:  adjust O:  travel distances
+S:  Zephyrian Gliders P:  adjust O:  travel distances according to lunar cycle
+S:  Sapphire Trees P:  change color O:  depending on humidity
+S:  Sapphire Trees P:  have O:  leaves that change color
+S:  Moonflowers P:  bloom once O:  every 17 days
+S:  Moonflowers P:  bloom O:  once every 17 days
+S:  Moonflowers P:  attract O:  nocturnal pollen-carrying insects
+S:  Sapphire Trees P:  have O:  leaves
+S:  Lumina Finch P:  has O:  soft golden glow
+S:  Lumina Finch P:  has O:  soft golden feathers
+S:  Lumina Finch P:  has O:  feathers that emit a glow
+S:  Aurorite P:  absorbs ambient light and releases O:  green luminescence
+Total amount of triplets generated:  60
+
+Generated Knowledge Base Examination
+Wrong answer:  Northern
+Correct answer:  Zephyria
+Question:  What island hosts the Lumina Finch?
+
+Wrong answer:  male
+Correct answer:  Leader
+Question:  Who guides the flock during migrations?
+
+Wrong answer:  Sapphire
+Correct answer:  Moonflower
+Question:  What type of flower produces blue nectar?
+
+Wrong answer:  night
+Correct answer:  Nocturnal
+Question:  When are pollen-carrying insects active?
+
+Wrong answer:  Northern
+Correct answer:  Caves
+Question:  Where is Aurorite found?
+
+Wrong answer:  roots
+Correct answer:  Sapphire
+Question:  Which trees are Aurorite deposits found under?
+
+Wrong answer:  recall
+Correct answer:  Enhance
+Question:  What effect does Aurorite have on memory?
+
+Wrong answer:  night
+Correct answer:  Nocturnal
+Question:  When are Zephyrian Gliders active?
+
+Wrong answer:  fungi
+Correct answer:  Luminescent
+Question:  Which fungi glow at night?
+
+Wrong answer:  Zephyrian
+Correct answer:  Lunar
+Question:  Which phase influences gliders?
+
+Wrong answer:  phase
+Correct answer:  Lumina Finch
+Question:  What species thrives in hidden valleys?
+
+Wrong answer:  Gliders
+Correct answer:  Branches
+Question:  What part of the tree do birds build nests on?
+
+Wrong answer:  insects
+Correct answer:  Male
+Question:  Which gender is the oldest in the flock?
+
+Wrong answer:  Moonflowers
+Correct answer:  Gliders
+Question:  Who synchronizes movements with the moon?
+
+Wrong answer:  cliffs
+Correct answer:  Gliders
+Question:  Which animals are nocturnal?
+
+Wrong answer:  Sapphire
+Correct answer:  Changing
+Question:  What color are Sapphire Tree leaves in humidity?
+
+Wrong answer:  Sapphire
+Correct answer:  Finch
+Question:  Which species feeds on blue nectar?
+
+Wrong answer:  humidity
+Correct answer:  Insects
+Question:  Which animals are attracted to glowing feathers?
+
+Wrong answer:  Moonflowers
+Correct answer:  Zephyria
+Question:  Where are Moonflowers found?
+
+Wrong answer:  insects
+Correct answer:  Aurorite
+Question:  Which mineral is linked with trees?
+
+Wrong answer:  feathers
+Correct answer:  Sapphire
+Question:  What type of tree changes leaf color?
+
+Wrong answer:  feathers
+Correct answer:  Hidden
+Question:  What type of forest hosts Lumina Finch?
+
+Wrong answer:  insects
+Correct answer:  Finch
+Question:  Which species glows at night?
+
+Wrong answer:  Northern
+Correct answer:  Feathers
+Question:  What helps insects pollinate Moonflowers?
+
+Wrong answer:  roots
+Correct answer:  Moonflower
+Question:  Which plant blooms every 17 days?
+
+Wrong answer:  Seaglow
+Correct answer:  Gliders
+Question:  Which mammals glide at night?
+
+Wrong answer:  membranes
+Correct answer:  Cliffs
+Question:  Where do Gliders live?
+
+Wrong answer:  luminescent
+Correct answer:  Moonflower
+Question:  Which plant relies on nocturnal insects?
+
+Wrong answer:  green
+Correct answer:  Zephyria
+Question:  Which island has caves with Aurorite?
+
+Wrong answer:  tablet
+Correct answer:  Aurorite
+Question:  What mineral enhances memory?
+
+Wrong answer:  Northern
+Correct answer:  Sapphire
+Question:  Which tree has roots near Aurorite?
+
+Wrong answer:  Sapphire
+Correct answer:  Lumina Finch
+Question:  Which bird emits light?
+
+Wrong answer:  Lumina
+Correct answer:  Gliders
+Question:  Which mammals have translucent membranes?
+
+Correct =  17
+Incorrest =  33
+Tokens used to create KB:  100498
+Tokens used to examine KB answering questions:  140543
+Model:  gpt-4-turbo
+S:  Lumina Finch P:  lives in O:  Zephyria
+S:  Lumina Finch P:  thrives in O:  hidden valleys
+S:  Lumina Finch P:  has feathers O:  glow at night
+S:  Sapphire Trees P:  host O:  Lumina Finch nests
+S:  Lumina Finch P:  feeds on O:  blue nectar
+S:  Moonflowers P:  produce O:  blue nectar
+S:  Moonflowers P:  bloom O:  every 17 days
+S:  Moonflowers P:  rely on O:  nocturnal insects
+S:  Aurorite P:  found under O:  Sapphire Trees
+S:  Aurorite P:  releases O:  green luminescence
+S:  Zephyrian Gliders P:  feed on O:  luminescent fungi
+S:  Zephyrian Gliders P:  synchronize O:  with moon phases
+S:  Lumina Finch P:  uses glow O:  to communicate
+S:  Lumina Finch leader P:  is O:  oldest male
+S:  Lumina Finch leader P:  guides O:  during migrations
+S:  Lumina Finch P:  glows O:  attracts insects
+S:  Aurorite P:  absorbs O:  ambient light
+S:  Locals P:  believe O:  Aurorite enhances memory
+S:  Zephyrian Gliders P:  are O:  nocturnal
+S:  Luminescent fungi P:  grows O:  near Aurorite
+S:  Sapphire Trees P:  leaves change color O:  with humidity
+S:  Lumina Finch P:  communicates O:  with flock
+S:  Aurorite P:  brings O:  vivid dreams
+S:  Aurorite P:  enhances O:  memory recall
+S:  Zephyria P:  hosts O:  Zephyrian Gliders
+S:  Sapphire Trees P:  have leaves O:  change with humidity
+S:  Lumina Finch P:  builds nests O:  in Sapphire Trees
+S:  Lumina Finch P:  attracted by O:  glowing feathers
+S:  Aurorite P:  suggests relationship O:  with Sapphire Trees
+S:  Zephyrian Gliders P:  glide between O:  cliffs
+S:  Zephyrian Gliders P:  use O:  translucent membranes
+S:  Zephyrian Gliders P:  adjust O:  travel distances
+S:  Luminescent fungi P:  grow in O:  Aurorite areas
+S:  Zephyrian Gliders P:  travel by O:  gliding
+S:  Zephyrian Gliders P:  adjust travel O:  by lunar cycle
+S:  Zephyrian Gliders P:  are small O:  mammals
+S:  Lumina Finch P:  builds nests O:  in Sapphire Trees
+S:  Lumina Finch P:  guides migration O:  oldest male
+S:  Aurorite P:  enhances O:  vivid dreams
+S:  Aurorite P:  absorbs light O:  releases luminescence
+S:  Zephyrian Gliders P:  glide with O:  translucent membranes
+S:  Zephyrian Gliders P:  are synchronized O:  moon phases
+S:  Zephyrian Gliders P:  feed on O:  luminescent fungi
+S:  Luminescent fungi P:  grow in O:  Aurorite glow
+S:  Zephyria P:  contains O:  Aurorite
+S:  Aurorite P:  found beneath O:  Sapphire Trees roots
+S:  Sapphire Trees P:  change color O:  with humidity
+S:  Lumina Finch P:  communicates O:  glow
+S:  Zephyrian Gliders P:  are nocturnal O:  mammals
+S:  Lumina Finch P:  communicates using O:  glow
+S:  Zephyrian Gliders P:  glide between O:  cliffs
+S:  Zephyrian Gliders P:  glide O:  between cliffs
+S:  Zephyrian Gliders P:  use O:  translucent membranes
+S:  Zephyrian Gliders P:  adjust travel O:  by lunar cycle
+S:  Zephyrian Gliders P:  are small O:  mammals
+S:  Aurorite P:  found under O:  Sapphire Trees
+S:  Aurorite P:  releases O:  green luminescence
+S:  Zephyria P:  contains O:  Aurorite
+S:  Aurorite P:  absorbs light O:  during day
+S:  Aurorite P:  releases O:  green light
+S:  Locals P:  believe O:  Aurorite enhances dreams
+S:  Zephyrian Gliders P:  are nocturnal O:  mammals
+S:  Zephyrian Gliders P:  glide with O:  translucent membranes
+S:  Zephyrian Gliders P:  synchronize O:  with moon
+S:  Zephyrian Gliders P:  feed on O:  luminescent fungi
+S:  Luminescent fungi P:  only grow O:  near Aurorite
+S:  Zephyrian Gliders P:  adjust travel O:  by lunar cycle
+S:  Zephyrian Gliders P:  are small O:  mammals
+S:  Zephyrian Gliders P:  use O:  translucent membranes
+S:  Zephyrian Gliders P:  synchronize O:  with moon phases
+S:  Zephyrian Gliders P:  glide between O:  cliffs
+S:  Zephyrian Gliders P:  adjust travel O:  by lunar cycle
+S:  Zephyrian Gliders P:  are small O:  mammals
+S:  Zephyrian Gliders P:  use O:  translucent membranes
+S:  Zephyrian Gliders P:  synchronize O:  with moon phases
+S:  Zephyrian Gliders P:  glide between O:  cliffs
+S:  Zephyrian Gliders P:  use O:  translucent membranes
+S:  Zephyrian Gliders P:  adjust travel O:  by lunar cycle
+S:  Zephyrian Gliders P:  are small O:  mammals
+S:  Zephyrian Gliders P:  use O:  translucent membranes
+Total amount of triplets generated:  80
+
+Generated Knowledge Base Examination
+Wrong answer:  blue
+Correct answer:  Golden
+Question:  What color do Lumina Finch feathers glow?
+
+Wrong answer:  oldest
+Correct answer:  Male
+Question:  Which bird leads the flock?
+
+Wrong answer:  oldest
+Correct answer:  Leader
+Question:  Who guides the flock during migrations?
+
+Wrong answer:  Moonflowers
+Correct answer:  Moonflower
+Question:  What type of flower produces blue nectar?
+
+Wrong answer:  night
+Correct answer:  Nocturnal
+Question:  When are pollen-carrying insects active?
+
+Wrong answer:  Zephyria
+Correct answer:  Caves
+Question:  Where is Aurorite found?
+
+Wrong answer:  memory
+Correct answer:  Enhance
+Question:  What effect does Aurorite have on memory?
+
+Wrong answer:  translucent
+Correct answer:  Elongated
+Question:  What is unique about Zephyrian Gliders' limbs?
+
+Wrong answer:  night
+Correct answer:  Nocturnal
+Question:  When are Zephyrian Gliders active?
+
+Wrong answer:  Finches
+Correct answer:  Lumina Finch
+Question:  What species thrives in hidden valleys?
+
+Wrong answer:  oldest
+Correct answer:  Male
+Question:  Which gender is the oldest in the flock?
+
+Wrong answer:  nocturnal
+Correct answer:  Gliders
+Question:  Which animals are nocturnal?
+
+Wrong answer:  blue
+Correct answer:  Changing
+Question:  What color are Sapphire Tree leaves in humidity?
+
+Wrong answer:  Finches
+Correct answer:  Finch
+Question:  Which species feeds on blue nectar?
+
+Wrong answer:  valleys
+Correct answer:  Zephyria
+Question:  Where are Moonflowers found?
+
+Wrong answer:  Lumina
+Correct answer:  Finch
+Question:  Which species glows at night?
+
+Wrong answer:  nocturnal
+Correct answer:  Feathers
+Question:  What helps insects pollinate Moonflowers?
+
+Wrong answer:  Moonflowers
+Correct answer:  Moonflower
+Question:  Which plant blooms every 17 days?
+
+Wrong answer:  Moonflowers
+Correct answer:  Moonflower
+Question:  Which plant relies on nocturnal insects?
+
+Wrong answer:  caves
+Correct answer:  Zephyria
+Question:  Which island has caves with Aurorite?
+
+Wrong answer:  Lumina
+Correct answer:  Lumina Finch
+Question:  Which bird emits light?
+
+Correct =  29
+Incorrest =  21
+Tokens used to create KB:  154127
+Tokens used to examine KB answering questions:  160700
+Model:  gpt-5-chat-latest
+S:  Lumina Finch P:  thrives in O:  Zephyria valleys
+S:  Lumina Finch P:  feeds on O:  blue nectar
+S:  Moonflowers P:  bloom every O:  17 days
+S:  Sapphire Trees P:  leaves change with O:  humidity
+S:  Aurorite P:  glows O:  green at night
+S:  Zephyrian Gliders P:  glide with O:  moon phases
+S:  Zephyrian Gliders P:  feed on O:  luminescent fungi
+S:  Aurorite P:  found under O:  Sapphire Trees
+S:  Aurorite P:  enhances O:  memory recall
+S:  Lumina Finch leader P:  is O:  oldest male
+S:  Lumina Finch P:  nests in O:  Sapphire Trees
+S:  Lumina Finch P:  feathers glow O:  at night
+S:  Moonflowers P:  depend on O:  nocturnal insects
+S:  Aurorite P:  discovered in O:  northern caves
+S:  Zephyrian Gliders P:  are O:  nocturnal
+S:  Aurorite P:  absorbs O:  ambient light
+S:  Sapphire Trees P:  have O:  color-changing leaves
+S:  Zephyrian Gliders P:  have O:  translucent membranes
+S:  Lumina Finch P:  communicates with O:  glowing feathers
+S:  Aurorite P:  brings O:  vivid dreams
+S:  Zephyria P:  contains O:  hidden valleys
+S:  Lumina Finch P:  guides by O:  oldest male
+S:  Zephyrian Gliders P:  adjust travel by O:  lunar cycle
+S:  Moonflowers P:  produce O:  blue nectar
+S:  Lumina Finch P:  helps pollinate O:  Moonflowers
+S:  Zephyrian Gliders P:  live in O:  Zephyria
+S:  Aurorite P:  is O:  mineral
+S:  Sapphire Trees P:  grow in O:  Zephyria
+S:  Lumina Finch P:  species is O:  rare
+S:  Laumina Finch flocks P:  migrate during O:  seasons
+S:  Aurorite deposits P:  suggest O:  symbiosis with Sapphire Trees
+S:  Zephyrian Gliders P:  feed on O:  fungi under Aurorite glow
+S:  Moonflowers P:  attract O:  nocturnal insects
+S:  Zephyrian Gliders P:  have O:  elongated limbs
+S:  Lumina Finch P:  found in O:  Zephyria
+S:  Aurorite P:  releases O:  green luminescence
+S:  Sapphire Trees P:  roots contain O:  Aurorite
+S:  Zephyrian Gliders P:  synchronize with O:  moon phases
+S:  Moonflowers P:  rely on O:  insects
+S:  Locals P:  believe O:  Aurorite brings dreams
+S:  Aurorite P:  found beneath O:  Sapphire Trees
+S:  Zephyrian Gliders P:  glide between O:  cliffs
+S:  Aurorite P:  emits O:  green light
+S:  Lumina Finch P:  builds nests in O:  Sapphire Trees
+S:  Moonflowers P:  depend on O:  Lumina Finch
+S:  Zephyrian Gliders P:  eat O:  luminescent fungi
+S:  Aurorite P:  absorbs light O:  during day
+S:  Sapphire Trees P:  support O:  Lumina Finch nests
+S:  Zephyrian Gliders P:  are mammals O:  of Zephyria
+S:  Lumina Finch P:  flock leader O:  oldest male
+S:  Aurorite P:  linked with O:  Sapphire Trees
+S:  Moonflowers P:  produce nectar for O:  Lumina Finch
+S:  Aurorite P:  causes O:  vivid dreams
+S:  Zephyrian Gliders P:  active O:  at night
+S:  Aurorite P:  glows under O:  Sapphire Trees
+S:  Zephyrian Gliders P:  adjust by O:  lunar cycle
+S:  Aurorite P:  found in O:  Zephyria caves
+S:  Lumina Finch P:  uses feathers to O:  communicate
+S:  Zephyrian Gliders P:  depend on O:  Aurorite glow
+S:  Moonflowers P:  bloom every O:  17 days
+Total amount of triplets generated:  60
+
+Generated Knowledge Base Examination
+Wrong answer:  green
+Correct answer:  Golden
+Question:  What color do Lumina Finch feathers glow?
+
+Wrong answer:  male
+Correct answer:  Leader
+Question:  Who guides the flock during migrations?
+
+Wrong answer:  Moonflowers
+Correct answer:  Moonflower
+Question:  What type of flower produces blue nectar?
+
+Wrong answer:  night
+Correct answer:  Nocturnal
+Question:  When are pollen-carrying insects active?
+
+Wrong answer:  Zephyria
+Correct answer:  Caves
+Question:  Where is Aurorite found?
+
+Wrong answer:  dreams
+Correct answer:  Vivid
+Question:  What effect does Aurorite have on dreams?
+
+Wrong answer:  memory
+Correct answer:  Enhance
+Question:  What effect does Aurorite have on memory?
+
+Wrong answer:  night
+Correct answer:  Nocturnal
+Question:  When are Zephyrian Gliders active?
+
+Wrong answer:  fungi
+Correct answer:  Luminescent
+Question:  Which fungi glow at night?
+
+Wrong answer:  Zephyria
+Correct answer:  Lunar
+Question:  Which phase influences gliders?
+
+Wrong answer:  trees
+Correct answer:  Lumina Finch
+Question:  What species thrives in hidden valleys?
+
+Wrong answer:  male
+Correct answer:  Branches
+Question:  What part of the tree do birds build nests on?
+
+Wrong answer:  Gliders
+Correct answer:  Male
+Question:  Which gender is the oldest in the flock?
+
+Wrong answer:  nocturnal
+Correct answer:  Gliders
+Question:  Who synchronizes movements with the moon?
+
+Wrong answer:  blue
+Correct answer:  Gliders
+Question:  Which animals are nocturnal?
+
+Wrong answer:  Finch
+Correct answer:  Changing
+Question:  What color are Sapphire Tree leaves in humidity?
+
+Wrong answer:  insects
+Correct answer:  Finch
+Question:  Which species feeds on blue nectar?
+
+Wrong answer:  Zephyria
+Correct answer:  Insects
+Question:  Which animals are attracted to glowing feathers?
+
+Wrong answer:  Aurorite
+Correct answer:  Zephyria
+Question:  Where are Moonflowers found?
+
+Wrong answer:  Sapphire
+Correct answer:  Aurorite
+Question:  Which mineral is linked with trees?
+
+Wrong answer:  Zephyria
+Correct answer:  Sapphire
+Question:  What type of tree changes leaf color?
+
+Wrong answer:  Finch
+Correct answer:  Hidden
+Question:  What type of forest hosts Lumina Finch?
+
+Wrong answer:  insects
+Correct answer:  Finch
+Question:  Which species glows at night?
+
+Wrong answer:  Moonflowers
+Correct answer:  Feathers
+Question:  What helps insects pollinate Moonflowers?
+
+Wrong answer:  Gliders
+Correct answer:  Moonflower
+Question:  Which plant blooms every 17 days?
+
+Wrong answer:  Zephyria
+Correct answer:  Gliders
+Question:  Which mammals glide at night?
+
+Wrong answer:  Moonflowers
+Correct answer:  Cliffs
+Question:  Where do Gliders live?
+
+Wrong answer:  Zephyria
+Correct answer:  Moonflower
+Question:  Which plant relies on nocturnal insects?
+
+Wrong answer:  Aurorite
+Correct answer:  Zephyria
+Question:  Which island has caves with Aurorite?
+
+Wrong answer:  Sapphire
+Correct answer:  Aurorite
+Question:  What mineral enhances memory?
+
+Wrong answer:  Finch
+Correct answer:  Sapphire
+Question:  Which tree has roots near Aurorite?
+
+Wrong answer:  Gliders
+Correct answer:  Lumina Finch
+Question:  Which bird emits light?
+
+Wrong answer:  Aurorite
+Correct answer:  Gliders
+Question:  Which mammals have translucent membranes?
+
+Correct =  17
+Incorrest =  33
+Tokens used to create KB:  94709
+Tokens used to examine KB answering questions:  133185

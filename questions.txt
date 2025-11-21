@@ -1,0 +1,50 @@
+What island hosts the Lumina Finch?|Zephyria
+What color do Lumina Finch feathers glow?|Golden
+When do Lumina Finch feathers glow?|Night
+What type of tree do Lumina Finches nest in?|Sapphire
+Which bird leads the flock?|Male
+Which gender usually leads the flock?|Male
+Who guides the flock during migrations?|Leader
+What type of flower produces blue nectar?|Moonflower
+How often do Moonflowers bloom?|17
+Which creatures carry pollen for Moonflowers?|Insects
+When are pollen-carrying insects active?|Nocturnal
+What mineral glows green at night?|Aurorite
+Where is Aurorite found?|Caves
+Which trees are Aurorite deposits found under?|Sapphire
+What does Aurorite absorb during the day?|Light
+What color does Aurorite glow?|Green
+What effect does Aurorite have on dreams?|Vivid
+What effect does Aurorite have on memory?|Enhance
+Which mammals glide between cliffs?|Gliders
+What is unique about Zephyrian Gliders' limbs?|Elongated
+What covers the gliders for flying?|Membranes
+When are Zephyrian Gliders active?|Nocturnal
+What do Zephyrian Gliders feed on?|Fungi
+Which fungi glow at night?|Luminescent
+What affects glider travel distance?|Moon
+Which phase influences gliders?|Lunar
+What species thrives in hidden valleys?|Lumina Finch
+What part of the tree do birds build nests on?|Branches
+Which gender is the oldest in the flock?|Male
+Who synchronizes movements with the moon?|Gliders
+Which animals are nocturnal?|Gliders
+What color are Sapphire Tree leaves in humidity?|Changing
+Which species feeds on blue nectar?|Finch
+Which animals are attracted to glowing feathers?|Insects
+Where are Moonflowers found?|Zephyria
+Which mineral is linked with trees?|Aurorite
+What type of tree changes leaf color?|Sapphire
+What type of forest hosts Lumina Finch?|Hidden
+Which species glows at night?|Finch
+What helps insects pollinate Moonflowers?|Feathers
+Which plant blooms every 17 days?|Moonflower
+Which mammals glide at night?|Gliders
+Where do Gliders live?|Cliffs
+Which plant relies on nocturnal insects?|Moonflower
+Which island has caves with Aurorite?|Zephyria
+What mineral enhances memory?|Aurorite
+Which tree has roots near Aurorite?|Sapphire
+Which bird emits light?|Lumina Finch
+Which mammals have translucent membranes?|Gliders
+What mineral emits faint light?|Aurorite

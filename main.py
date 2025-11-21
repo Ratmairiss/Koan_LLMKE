@@ -1,106 +1,113 @@
+from openai import OpenAI
+from graph import create_graph
+from funcs import *
 import json
-import requests
+import config
+import time
 
-API_URL = "https://api.intelligence.io.solutions/api/v1/chat/completions"
-HEADERS = {
-    "Authorization": "Bearer io-v2-eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJvd25lciI6IjIyMjZhNmEzLTFkNDktNDM3Yy05MmQyLWQyYmZhODE4ODJjYSIsImV4cCI6NDkxNjI5NTI3NH0.MKNz_PpRpKx5Gv0YyttIToOa9Q6W5MOoTLRMYBKrzTQWOb0Wnl2ypmhfbTJbnUEtTKarNZb9YRnx4cc3iM5OcQ",
-    "Content-Type": "application/json"
-}
-model = "openai/gpt-oss-120b"
+client = OpenAI(api_key=config.API_KEY)
+with open("text.txt", "r", encoding="utf-8") as f:
+    text = f.read()
 
-text_to_process = """
-Alice loves Bob. 
-Bob works at OpenAI. 
-Carol lives in Paris and likes croissants.
-"""
+questions = []
+answers   = []
+with open("questions.txt", "r", encoding="utf-8") as f:
+    for line in f:
+        question, answer = line.split("|", 1)
+        questions.append(question)
+        answers.append(answer.strip())
 
-questions = [
-    "Who does Alice love?",
-    "Where does Carol live?",
-    "Where does Bob work?"
+extr_messages = [
+        {"role": "system", "content": config.sys_extr_prompt},
+        {'role': 'user',   "content": text}
+]
+answ_messages = [
+        {"role": "system", "content": config.sys_answ_prompt},
+        {'role': 'user',   "content": "\n".join(questions)}
+]
+get_tr_amt_messages = [
+    {"role": "system", "content": config.get_tr_amt_prompt},
+    {'role': 'user', "content": text}
 ]
 
-def extract_triplets(text):
-    payload = {
-        "model": model,
-        "messages": [{"role": "user", "content": f"Extract all meaningful triplets (subject, predicate, object) from the following text in strictly valid JSON:\n\n{text}"}],
-        "response_format": {
-            "type": "json_schema",
-            "json_schema": {
-                "name": "TripletsSchema",
-                "strict": True,
-                "schema": {
-                    "type": "object",
-                    "properties": {
-                        "triplets": {
-                            "type": "array",
-                            "items": {
-                                "type": "object",
-                                "properties": {
-                                    "subject": {"type": "string"},
-                                    "predicate": {"type": "string"},
-                                    "object": {"type": "string"}
-                                },
-                                "required": ["subject", "predicate", "object"]
-                            }
-                        }
-                    },
-                    "required": ["triplets"]
-                }
-            }
-        },
-        "temperature": 0
-    }
-    return requests.post(API_URL, headers=HEADERS, json=payload).json()["choices"][0]["message"]["content"]
+amt_triplets     = {}
+tokens_creating  = {}
+tokens_answering = {}
 
-def answer_questions(triplets, questions):
+for model in config.models:
 
-    payload = {
-        "model": model,
-        "messages": [
-            {
-                "role": "user",
-                "content": f"""
-Given the following knowledge base (triplets):
-{triplets}
+    print("Model: ", model)
 
-Answer the following questions strictly in JSON format, including the question text and the answer as a single word or phrase:
+    tokens_creating[model]  = 0
+    tokens_answering[model] = 0
+    triplets                = []
 
-{questions}
-"""
-            }
-        ],
-        "response_format": {
-            "type": "json_schema",
-            "json_schema": {
-                "name": "AnswerWordsSchema",
-                "strict": True,
-                "schema": {
-                    "type": "object",
-                    "properties": {
-                        "answers": {
-                            "type": "array",
-                            "items": {
-                                "type": "object",
-                                "properties": {
-                                    "question": {"type": "string"},
-                                    "answer": {"type": "string"}
-                                },
-                                "required": ["question", "answer"]
-                            }
-                        }
-                    },
-                    "required": ["answers"]
-                }
-            }
-        },
-        "temperature": 0
-    }
-    return requests.post(API_URL, headers=HEADERS, json=payload).json()["choices"][0]["message"]["content"]
+    response = client.chat.completions.create(
+        model=model,
+        messages=get_tr_amt_messages,
+        functions=config.functions,
+        function_call={"name": 'get_amt_triplet'}
+    )
 
+    amt_triplets[model] = int(json.loads(response.choices[0].message.function_call.arguments)['number of triplets'])
 
-triplets = extract_triplets(text_to_process)
-print("Extracted Triplets:", triplets, sep = "\n")
+    i = 0
+    while i < amt_triplets[model]:
+        try:
+            response = client.chat.completions.create(
+                    model = model,
+                    messages = extr_messages,
+                    functions = config.functions,
+                    function_call = {"name": 'extract_triplet'}
+                )
 
-answers = answer_questions(triplets, questions)
-print("Result:", answers, sep = "\n")
+            extr_messages.append({
+                "role": "assistant",
+                "content": None,
+                "function_call": response.choices[0].message.function_call
+            })
+
+            triplets.append(json.loads(response.choices[0].message.function_call.arguments))
+            tokens_creating[model] += int(response.usage.total_tokens)
+
+            i += 1
+        except Exception:
+            time.sleep(1)
+
+    create_graph(triplets, model.replace('.','-') + "-KnowledgeGraph.html")
+    for tr in triplets:
+        print("S: ", tr['Subject'], "P: ", tr['Predicate'], "O: ", tr['Object'])
+    print("Total amount of triplets generated: ", amt_triplets[model], "\n")
+
+    extr_messages = extr_messages[:2]
+    llm_answers = []
+    answ_messages.append({'role': 'user',   "content": str(triplets)})
+
+    i = 0
+    while i < len(questions):
+        try:
+            response = client.chat.completions.create(
+                model = model,
+                messages = answ_messages,
+                functions = config.functions,
+                function_call = {"name": 'answer_question'}
+            )
+
+            answ_messages.append({
+                "role": "assistant",
+                "content": None,
+                "function_call": response.choices[0].message.function_call
+            })
+            llm_answers.append(json.loads(response.choices[0].message.function_call.arguments))
+            tokens_answering[model] += int(response.usage.total_tokens)
+            i += 1
+        except Exception:
+            time.sleep(1)
+
+    answ_messages = answ_messages[:2]
+
+    print("Generated Knowledge Base Examination")
+    print_answers_check(llm_answers, answers, questions)
+    print("Tokens used to create KB: ", tokens_creating[model])
+    print("Tokens used to examine KB answering questions: ", tokens_answering[model])
+

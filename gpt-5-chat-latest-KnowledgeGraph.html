@@ -1,0 +1,163 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 600px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "plum", "id": "Lumina Finch", "label": "Lumina Fin\u2026", "shape": "circle"}, {"color": "lightgreen", "id": "Zephyria valleys", "label": "Zephyria v\u2026", "shape": "circle"}, {"color": "lightgreen", "id": "blue nectar", "label": "blue necta\u2026", "shape": "circle"}, {"color": "plum", "id": "Moonflowers", "label": "Moonflower\u2026", "shape": "circle"}, {"color": "lightgreen", "id": "17 days", "label": "17 days", "shape": "circle"}, {"color": "plum", "id": "Sapphire Trees", "label": "Sapphire T\u2026", "shape": "circle"}, {"color": "lightgreen", "id": "humidity", "label": "humidity", "shape": "circle"}, {"color": "plum", "id": "Aurorite", "label": "Aurorite", "shape": "circle"}, {"color": "lightgreen", "id": "green at night", "label": "green at n\u2026", "shape": "circle"}, {"color": "lightblue", "id": "Zephyrian Gliders", "label": "Zephyrian \u2026", "shape": "circle"}, {"color": "lightgreen", "id": "moon phases", "label": "moon phase\u2026", "shape": "circle"}, {"color": "lightgreen", "id": "luminescent fungi", "label": "luminescen\u2026", "shape": "circle"}, {"color": "lightgreen", "id": "memory recall", "label": "memory rec\u2026", "shape": "circle"}, {"color": "lightblue", "id": "Lumina Finch leader", "label": "Lumina Fin\u2026", "shape": "circle"}, {"color": "lightgreen", "id": "oldest male", "label": "oldest mal\u2026", "shape": "circle"}, {"color": "lightgreen", "id": "at night", "label": "at night", "shape": "circle"}, {"color": "lightgreen", "id": "nocturnal insects", "label": "nocturnal \u2026", "shape": "circle"}, {"color": "lightgreen", "id": "northern caves", "label": "northern c\u2026", "shape": "circle"}, {"color": "lightgreen", "id": "nocturnal", "label": "nocturnal", "shape": "circle"}, {"color": "lightgreen", "id": "ambient light", "label": "ambient li\u2026", "shape": "circle"}, {"color": "lightgreen", "id": "color-changing leaves", "label": "color-chan\u2026", "shape": "circle"}, {"color": "lightgreen", "id": "translucent membranes", "label": "translucen\u2026", "shape": "circle"}, {"color": "lightgreen", "id": "glowing feathers", "label": "glowing fe\u2026", "shape": "circle"}, {"color": "lightgreen", "id": "vivid dreams", "label": "vivid drea\u2026", "shape": "circle"}, {"color": "plum", "id": "Zephyria", "label": "Zephyria", "shape": "circle"}, {"color": "lightgreen", "id": "hidden valleys", "label": "hidden val\u2026", "shape": "circle"}, {"color": "lightgreen", "id": "lunar cycle", "label": "lunar cycl\u2026", "shape": "circle"}, {"color": "lightgreen", "id": "mineral", "label": "mineral", "shape": "circle"}, {"color": "lightgreen", "id": "rare", "label": "rare", "shape": "circle"}, {"color": "lightblue", "id": "Laumina Finch flocks", "label": "Laumina Fi\u2026", "shape": "circle"}, {"color": "lightgreen", "id": "seasons", "label": "seasons", "shape": "circle"}, {"color": "lightblue", "id": "Aurorite deposits", "label": "Aurorite d\u2026", "shape": "circle"}, {"color": "lightgreen", "id": "symbiosis with Sapphire Trees", "label": "symbiosis \u2026", "shape": "circle"}, {"color": "lightgreen", "id": "fungi under Aurorite glow", "label": "fungi unde\u2026", "shape": "circle"}, {"color": "lightgreen", "id": "elongated limbs", "label": "elongated \u2026", "shape": "circle"}, {"color": "lightgreen", "id": "green luminescence", "label": "green lumi\u2026", "shape": "circle"}, {"color": "lightgreen", "id": "insects", "label": "insects", "shape": "circle"}, {"color": "lightblue", "id": "Locals", "label": "Locals", "shape": "circle"}, {"color": "lightgreen", "id": "Aurorite brings dreams", "label": "Aurorite b\u2026", "shape": "circle"}, {"color": "lightgreen", "id": "cliffs", "label": "cliffs", "shape": "circle"}, {"color": "lightgreen", "id": "green light", "label": "green ligh\u2026", "shape": "circle"}, {"color": "lightgreen", "id": "during day", "label": "during day", "shape": "circle"}, {"color": "lightgreen", "id": "Lumina Finch nests", "label": "Lumina Fin\u2026", "shape": "circle"}, {"color": "lightgreen", "id": "of Zephyria", "label": "of Zephyri\u2026", "shape": "circle"}, {"color": "lightgreen", "id": "Zephyria caves", "label": "Zephyria c\u2026", "shape": "circle"}, {"color": "lightgreen", "id": "communicate", "label": "communicat\u2026", "shape": "circle"}, {"color": "lightgreen", "id": "Aurorite glow", "label": "Aurorite g\u2026", "shape": "circle"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "Lumina Finch", "label": "thrives in", "title": "thrives in", "to": "Zephyria valleys"}, {"arrows": "to", "from": "Lumina Finch", "label": "feeds on", "title": "feeds on", "to": "blue nectar"}, {"arrows": "to", "from": "Moonflowers", "label": "bloom ever\u2026", "title": "bloom every", "to": "17 days"}, {"arrows": "to", "from": "Sapphire Trees", "label": "leaves cha\u2026", "title": "leaves change with", "to": "humidity"}, {"arrows": "to", "from": "Aurorite", "label": "glows", "title": "glows", "to": "green at night"}, {"arrows": "to", "from": "Zephyrian Gliders", "label": "glide with", "title": "glide with", "to": "moon phases"}, {"arrows": "to", "from": "Zephyrian Gliders", "label": "feed on", "title": "feed on", "to": "luminescent fungi"}, {"arrows": "to", "from": "Aurorite", "label": "found unde\u2026", "title": "found under", "to": "Sapphire Trees"}, {"arrows": "to", "from": "Aurorite", "label": "enhances", "title": "enhances", "to": "memory recall"}, {"arrows": "to", "from": "Lumina Finch leader", "label": "is", "title": "is", "to": "oldest male"}, {"arrows": "to", "from": "Lumina Finch", "label": "nests in", "title": "nests in", "to": "Sapphire Trees"}, {"arrows": "to", "from": "Lumina Finch", "label": "feathers g\u2026", "title": "feathers glow", "to": "at night"}, {"arrows": "to", "from": "Moonflowers", "label": "depend on", "title": "depend on", "to": "nocturnal insects"}, {"arrows": "to", "from": "Aurorite", "label": "discovered\u2026", "title": "discovered in", "to": "northern caves"}, {"arrows": "to", "from": "Zephyrian Gliders", "label": "are", "title": "are", "to": "nocturnal"}, {"arrows": "to", "from": "Aurorite", "label": "absorbs", "title": "absorbs", "to": "ambient light"}, {"arrows": "to", "from": "Sapphire Trees", "label": "have", "title": "have", "to": "color-changing leaves"}, {"arrows": "to", "from": "Zephyrian Gliders", "label": "have", "title": "have", "to": "translucent membranes"}, {"arrows": "to", "from": "Lumina Finch", "label": "communicat\u2026", "title": "communicates with", "to": "glowing feathers"}, {"arrows": "to", "from": "Aurorite", "label": "brings", "title": "brings", "to": "vivid dreams"}, {"arrows": "to", "from": "Zephyria", "label": "contains", "title": "contains", "to": "hidden valleys"}, {"arrows": "to", "from": "Lumina Finch", "label": "guides by", "title": "guides by", "to": "oldest male"}, {"arrows": "to", "from": "Zephyrian Gliders", "label": "adjust tra\u2026", "title": "adjust travel by", "to": "lunar cycle"}, {"arrows": "to", "from": "Moonflowers", "label": "produce", "title": "produce", "to": "blue nectar"}, {"arrows": "to", "from": "Lumina Finch", "label": "helps poll\u2026", "title": "helps pollinate", "to": "Moonflowers"}, {"arrows": "to", "from": "Zephyrian Gliders", "label": "live in", "title": "live in", "to": "Zephyria"}, {"arrows": "to", "from": "Aurorite", "label": "is", "title": "is", "to": "mineral"}, {"arrows": "to", "from": "Sapphire Trees", "label": "grow in", "title": "grow in", "to": "Zephyria"}, {"arrows": "to", "from": "Lumina Finch", "label": "species is", "title": "species is", "to": "rare"}, {"arrows": "to", "from": "Laumina Finch flocks", "label": "migrate du\u2026", "title": "migrate during", "to": "seasons"}, {"arrows": "to", "from": "Aurorite deposits", "label": "suggest", "title": "suggest", "to": "symbiosis with Sapphire Trees"}, {"arrows": "to", "from": "Zephyrian Gliders", "label": "feed on", "title": "feed on", "to": "fungi under Aurorite glow"}, {"arrows": "to", "from": "Moonflowers", "label": "attract", "title": "attract", "to": "nocturnal insects"}, {"arrows": "to", "from": "Zephyrian Gliders", "label": "have", "title": "have", "to": "elongated limbs"}, {"arrows": "to", "from": "Lumina Finch", "label": "found in", "title": "found in", "to": "Zephyria"}, {"arrows": "to", "from": "Aurorite", "label": "releases", "title": "releases", "to": "green luminescence"}, {"arrows": "to", "from": "Sapphire Trees", "label": "roots cont\u2026", "title": "roots contain", "to": "Aurorite"}, {"arrows": "to", "from": "Zephyrian Gliders", "label": "synchroniz\u2026", "title": "synchronize with", "to": "moon phases"}, {"arrows": "to", "from": "Moonflowers", "label": "rely on", "title": "rely on", "to": "insects"}, {"arrows": "to", "from": "Locals", "label": "believe", "title": "believe", "to": "Aurorite brings dreams"}, {"arrows": "to", "from": "Aurorite", "label": "found bene\u2026", "title": "found beneath", "to": "Sapphire Trees"}, {"arrows": "to", "from": "Zephyrian Gliders", "label": "glide betw\u2026", "title": "glide between", "to": "cliffs"}, {"arrows": "to", "from": "Aurorite", "label": "emits", "title": "emits", "to": "green light"}, {"arrows": "to", "from": "Lumina Finch", "label": "builds nes\u2026", "title": "builds nests in", "to": "Sapphire Trees"}, {"arrows": "to", "from": "Moonflowers", "label": "depend on", "title": "depend on", "to": "Lumina Finch"}, {"arrows": "to", "from": "Zephyrian Gliders", "label": "eat", "title": "eat", "to": "luminescent fungi"}, {"arrows": "to", "from": "Aurorite", "label": "absorbs li\u2026", "title": "absorbs light", "to": "during day"}, {"arrows": "to", "from": "Sapphire Trees", "label": "support", "title": "support", "to": "Lumina Finch nests"}, {"arrows": "to", "from": "Zephyrian Gliders", "label": "are mammal\u2026", "title": "are mammals", "to": "of Zephyria"}, {"arrows": "to", "from": "Lumina Finch", "label": "flock lead\u2026", "title": "flock leader", "to": "oldest male"}, {"arrows": "to", "from": "Aurorite", "label": "linked wit\u2026", "title": "linked with", "to": "Sapphire Trees"}, {"arrows": "to", "from": "Moonflowers", "label": "produce ne\u2026", "title": "produce nectar for", "to": "Lumina Finch"}, {"arrows": "to", "from": "Aurorite", "label": "causes", "title": "causes", "to": "vivid dreams"}, {"arrows": "to", "from": "Zephyrian Gliders", "label": "active", "title": "active", "to": "at night"}, {"arrows": "to", "from": "Aurorite", "label": "glows unde\u2026", "title": "glows under", "to": "Sapphire Trees"}, {"arrows": "to", "from": "Zephyrian Gliders", "label": "adjust by", "title": "adjust by", "to": "lunar cycle"}, {"arrows": "to", "from": "Aurorite", "label": "found in", "title": "found in", "to": "Zephyria caves"}, {"arrows": "to", "from": "Lumina Finch", "label": "uses feath\u2026", "title": "uses feathers to", "to": "communicate"}, {"arrows": "to", "from": "Zephyrian Gliders", "label": "depend on", "title": "depend on", "to": "Aurorite glow"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"shape": "circle", "widthConstraint": {"minimum": 55, "maximum": 55}, "heightConstraint": {"minimum": 55, "maximum": 55}, "font": {"size": 16, "color": "black"}}, "edges": {"width": 2, "font": {"size": 16, "color": "black"}, "color": "lightblue", "length": 160}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    
+    <div style="position:absolute; top:10px; right:10px; background:white; padding:5px; border:1px solid black; z-index:1000;">
+    COLOR OF NODES: <br>
+    <span style="
+          display:inline-block;
+          width:65px;
+          height:65px;
+          background:lightblue;
+          color:black;
+          text-align:center;
+          line-height:60px;  
+          font-weight:bold;
+          margin-right:5px;
+      ">Subject</span>
+      <span style="
+          display:inline-block;
+          width:65px;
+          height:65px;
+          background:lightgreen;
+          color:black;
+          text-align:center;
+          line-height:60px;  
+          font-weight:bold;
+          margin-right:5px;
+      ">Object</span>
+      <span style="
+          display:inline-block;
+          width:65px;
+          height:65px;
+          background:plum;
+          color:black;
+          text-align:center;
+          line-height:60px;  
+          font-weight:bold;
+      ">S&O</span>
+    </div>  
+    </body>
+</html>
